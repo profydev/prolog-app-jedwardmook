@@ -135,12 +135,6 @@
 .collapseMenuItem {
   display: none;
 
-  // &.isCollapsed {
-  //   img {
-  //     transform: rotate(180deg);
-  //   }
-  // }
-
   @media (min-width: breakpoint.$desktop) {
     display: flex;
   }
