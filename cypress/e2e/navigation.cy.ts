@@ -44,6 +44,23 @@ describe("Sidebar Navigation", () => {
     });
   });
 
+  context("support button functionality", () => {
+    beforeEach(() => {
+      cy.viewport(1025, 900);
+    });
+
+    it.only("opens user mail app with prefilled recipient and subject", () => {
+      cy.get("button")
+        .contains("Support")
+        .find("a")
+        .should(
+          "have.attr",
+          "href",
+          "mailto:support@prolog-app.com?subject=Support%20Request:",
+        );
+    });
+  });
+
   context("mobile resolution", () => {
     beforeEach(() => {
       cy.viewport("iphone-8");

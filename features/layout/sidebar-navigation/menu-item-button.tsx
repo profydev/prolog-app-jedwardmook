@@ -24,6 +24,9 @@ export function MenuItemButton({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={styles.icon} src={iconSrc} alt={`${text} icon`} />{" "}
         {!isCollapsed && text}{" "}
+        {text === "Support" && (
+          <a href="mailto:support@prolog-app.com?subject=Support%20Request:"></a>
+        )}
       </Button>
     </li>
   );
