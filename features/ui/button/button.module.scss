@@ -1,5 +1,10 @@
+@use "@styles/color";
+@use "@styles/font";
+@use "@styles/space";
+
 .button {
   cursor: pointer;
+  border-radius: 8px;
 
   /* remove default button styles */
   border: none;
@@ -14,5 +19,211 @@
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
+  }
+
+  &.sm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    min-height: auto 20px;
+    min-width: auto 77px;
+    padding: 8px 14px;
+  }
+
+  &.md {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    min-height: 40px;
+    min-width: 109px;
+    padding: 10px 16px;
+  }
+
+  &.lg {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    min-height: 44px;
+    min-width: 124px;
+    padding: 10px 18px;
+  }
+
+  &.xl {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    min-height: 48px;
+    min-width: 128px;
+    padding: 12px 20px;
+  }
+
+  &.icon {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 10px;
+  }
+
+  &.iconWithText {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    line-height: 1.15;
+  }
+
+  &.white {
+    color: white;
+    background-color: transparent;
+  }
+
+  &.primary {
+    border: 1px solid color.$primary-600;
+    background-color: color.$primary-600;
+    color: white;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  }
+
+  &.primary:hover {
+    background-color: color.$primary-700;
+  }
+
+  &.primary:focus {
+    outline: 4px solid color.$primary-100;
+  }
+
+  &.primary:disabled {
+    border: 1px solid color.$primary-200;
+    background-color: color.$primary-200;
+  }
+
+  &.secondary {
+    border: 1px solid color.$primary-50;
+    background-color: color.$primary-50;
+    color: color.$primary-700;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  }
+
+  &.secondary:hover {
+    background-color: color.$primary-100;
+  }
+
+  &.secondary:focus {
+    outline: 4px solid color.$primary-100;
+  }
+
+  &.secondary:disabled {
+    border: 1px solid color.$primary-25;
+    background-color: color.$primary-25;
+    color: color.$primary-300;
+  }
+
+  &.gray {
+    border: 1px solid color.$gray-300;
+    background-color: white;
+    color: color.$gray-700;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  }
+
+  &.gray:hover {
+    background-color: color.$gray-50;
+    color: color.$gray-800;
+  }
+
+  &.gray:focus {
+    outline: 4px solid color.$gray-300;
+  }
+
+  &.gray:disabled {
+    border: 1px solid color.$gray-200;
+    color: color.$gray-300;
+  }
+
+  &.empty {
+    border: 1px solid white;
+    background: white;
+    color: color.$primary-700;
+  }
+
+  &.empty:hover {
+    background-color: color.$primary-50;
+  }
+
+  &.empty:disabled {
+    color: color.$gray-300;
+  }
+
+  &.emptyGray {
+    background: white;
+    color: color.$gray-500;
+  }
+
+  &.emptyGray:hover {
+    background-color: color.$gray-50;
+    color: color.$gray-600;
+  }
+
+  &.emptyGray:disabled {
+    color: color.$gray-300;
+  }
+
+  &.error {
+    border: 1px solid color.$error-600;
+    background: color.$error-600;
+    color: white;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  }
+
+  &.error:hover {
+    border: 1px solid color.$error-700;
+    background-color: color.$error-700;
+  }
+
+  &.error:focus {
+    outline: 4px solid color.$error-100;
+  }
+
+  &.error:disabled {
+    border: 1px solid color.$error-200;
+    background-color: color.$error-200;
+  }
+
+  &.emptyError {
+    color: color.$error-700;
+  }
+
+  &.emptyError:hover {
+    border: 1px solid color.$error-50;
+    background-color: color.$error-50;
+  }
+
+  &.emptyError:disabled {
+    color: color.$error-300;
+  }
+
+  &.openEmailApp {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    min-height: 42px;
+    min-width: 170px;
+    padding: 9px 18px;
   }
 }

@@ -52,17 +52,20 @@ const IssuesPage = () => {
               Any questions? Send us an email at prolog@profy.dev. We usually
               answer within 24 hours.
             </p>
-            <div>
-              <Button className={styles.cancelButton} onClick={handleModal}>
-                Cancel
-              </Button>
+            <div className={styles.buttonsContainer}>
+              <Button
+                size="openEmailApp"
+                color="gray"
+                onClick={handleModal}
+                label="Cancel"
+              />
               <a href="mailto:support@prolog-app.com?subject=Support%20Request:">
                 <Button
-                  className={styles.openEmailButton}
+                  size="openEmailApp"
+                  color="primary"
                   onClick={handleModal}
-                >
-                  Open Email App
-                </Button>
+                  label="Open Email App"
+                />
               </a>
             </div>
           </dialog>
