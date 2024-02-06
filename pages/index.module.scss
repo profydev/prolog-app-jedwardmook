@@ -70,6 +70,10 @@
   box-shadow: 0 6px 12px rgb(16 24 40 / 10%);
 }
 
+.supportModal img {
+  margin-top: 8px;
+}
+
 .modalHeader {
   font: font.$text-md-medium;
   font-size: 1.13rem;
@@ -86,33 +90,6 @@
   width: 350px;
   line-height: 20px;
   padding-bottom: 12px;
-}
-
-.cancelButton {
-  width: 170px;
-  height: 44px;
-  border-radius: 8px;
-  border: 1px solid color.$gray-300;
-  font: font.$text-md-medium;
-  color: color.$gray-700;
-  margin: 6px;
-  box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
-}
-
-.openEmailButton {
-  width: 170px;
-  height: 44px;
-  border-radius: 8px;
-  background-color: color.$primary-600;
-  border: 1px solid color.$primary-600;
-  font: font.$text-md-regular;
-  color: white;
-  margin: 6px;
-  box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
-
-  &:hover {
-    background: #6941c6;
-  }
 }
 
 .mainText {
@@ -133,4 +110,11 @@
   &:hover {
     background: #6941c6;
   }
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 5px 0 8px;
 }
